@@ -7,6 +7,7 @@ import MoreStories from 'components/MoreStories'
 import IntroTemplate from 'intro-template'
 import * as demo from 'lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
+import Navbar from './Navbar'
 
 export interface IndexPageProps {
   preview?: boolean
@@ -26,6 +27,7 @@ export default function IndexPage(props: IndexPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Container>
+          <Navbar />
           <BlogHeader title={title} description={description} level={1} />
           {heroPost && (
             <HeroPost
@@ -39,7 +41,7 @@ export default function IndexPage(props: IndexPageProps) {
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
-        <IntroTemplate />
+        {/* <IntroTemplate /> */}
       </Layout>
     </>
   )

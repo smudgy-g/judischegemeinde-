@@ -8,17 +8,15 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Add your logic to handle the form submission here
     console.log('Form submitted:', { name, email, message })
 
-    // Clear the form fields after submission
     setName('')
     setEmail('')
     setMessage('')
   }
 
   return (
-    <div>
+    <div className="bg-orange-700">
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit}>
         <label>
