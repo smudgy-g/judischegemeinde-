@@ -9,6 +9,7 @@ const postFields = groq`
   coverImage,
   "slug": slug.current,
   "author": author->{name, picture},
+  "video": video.asset->url
 `
 
 export const settingsQuery = groq`*[_type == "settings"][0]`
@@ -55,6 +56,7 @@ export interface Post {
   author?: Author
   slug?: string
   content?: any
+  video?: any
 }
 
 export interface Settings {

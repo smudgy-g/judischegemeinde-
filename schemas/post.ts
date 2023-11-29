@@ -1,6 +1,6 @@
 import { BookIcon } from '@sanity/icons'
 import { format, parseISO } from 'date-fns'
-import { defineField, defineType } from 'sanity'
+import { SlugRule, defineField, defineType } from 'sanity'
 
 import authorType from './author'
 
@@ -79,6 +79,26 @@ export default defineType({
       options: {
         hotspot: true,
       },
+    }),
+
+    defineField({
+      name: 'video',
+      title: 'Video',
+      type: 'file',
+
+      fields: [
+        {
+          name: 'description',
+          type: 'string',
+          title: 'Description',
+        },
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+          description: 'Important for SEO and accessiblity.',
+        },
+      ],
     }),
     defineField({
       name: 'date',

@@ -23,6 +23,7 @@ interface Query {
 
 export default function ProjectSlugRoute(props: PageProps) {
   const { settings, post, morePosts, draftMode } = props
+  console.log(post)
 
   if (draftMode) {
     return (

@@ -1,3 +1,5 @@
+'use client'
+
 import cn from 'classnames'
 import { urlForImage } from 'lib/sanity.image'
 import Image from 'next/image'
@@ -18,6 +20,7 @@ export default function CoverImage(props: CoverImageProps) {
         'transition-shadow duration-200 hover:shadow-medium': slug,
       })}
     >
+      {/* <a href={urlForImage(source).height(1000).width(2000).url()} download> */}
       <Image
         className="h-auto w-full"
         width={2000}
@@ -27,6 +30,7 @@ export default function CoverImage(props: CoverImageProps) {
         sizes="100vw"
         priority={priority}
       />
+      {/* </a> */}
     </div>
   ) : (
     <div style={{ paddingTop: '50%', backgroundColor: '#ddd' }} />

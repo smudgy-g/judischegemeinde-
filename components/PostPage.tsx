@@ -24,6 +24,7 @@ const NO_POSTS: Post[] = []
 export default function PostPage(props: PostPageProps) {
   const { preview, loading, morePosts = NO_POSTS, post, settings } = props
   const { title = demo.title } = settings || {}
+  console.log(props)
 
   const slug = post?.slug
 
