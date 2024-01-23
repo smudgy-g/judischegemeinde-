@@ -1,4 +1,5 @@
 import AlertBanner from 'components/AlertBanner'
+import Navbar from './Header'
 
 export default function BlogLayout({
   preview,
@@ -11,8 +12,9 @@ export default function BlogLayout({
 }) {
   return (
     <>
-      <div className="min-h-screen">
+      <div className="min-h-screen w-full">
         <AlertBanner preview={preview} loading={loading} />
+        <Navbar />
         <main>{children}</main>
       </div>
     </>
